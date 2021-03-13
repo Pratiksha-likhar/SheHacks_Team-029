@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>A Step Ahead</title>
+	<!-- Bootstrap core CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link href="../css/all.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../css/style.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+   <style>
+      body{
+         background: -webkit-linear-gradient(left, green, #0E8C47);
+      }
+      .emp-profile{
+         padding: 3%;
+         margin-top: 3%;
+         margin-bottom: 3%;
+         border-radius: 0.5rem;
+         background: #fff;
+      }
+      .profile-head h5{
+         color: #333;
+      }
+      .profile-head h6{
+         color: #0062cc;
+      }
+      .profile-edit-btn{
+         border: none;
+         border-radius: 1.5rem;
+         width: 70%;
+         padding: 2%;
+         font-weight: 600;
+         color: #6c757d;
+         cursor: pointer;
+      }
+      .proile-rating{
+         font-size: 12px;
+         color: #818182;
+         margin-top: 5%;
+      }
+      .proile-rating span{
+         color: #495057;
+         font-size: 15px;
+         font-weight: 600;
+      }
+      .profile-head .nav-tabs{
+         margin-bottom:5%;
+      }
+      .profile-head .nav-tabs .nav-link{
+         font-weight:600;
+         border: none;
+      }
+      .profile-head .nav-tabs .nav-link.active{
+         border: none;
+         border-bottom:2px solid #0062cc;
+      }
+      .profile-work{
+         padding: 14%;
+         margin-top: -15%;
+      }
+      .profile-work p{
+         font-size: 12px;
+         color: #818182;
+         font-weight: 600;
+         margin-top: 10%;
+      }
+      .profile-work a{
+         text-decoration: none;
+         color: #495057;
+         font-weight: 600;
+         font-size: 14px;
+      }
+      .profile-work ul{
+         list-style: none;
+      }
+      .profile-tab label{
+         font-weight: 600;
+      }
+      .profile-tab p{
+         font-weight: 600;
+         color: #0062cc;
+      }
+   </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="user-dashboard.html">
+            <img src="../images/logo.png" alt="logo" /> &nbsp; <span>Kalki- A Step Ahead</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="user-dashboard.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="user-about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="user-campaign.html">Campaign</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="user-services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="user-contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="complaints.html">Complain</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link active" href="user-profile.html">Profile</a>
+                 </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Sign-out</a>
+                 </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- PROFILE -->
+    <div class="container emp-profile">
+
+      <h2 style="text-align: center;"><b><u>Organisation Profile</u></b></h2>
+      <br>
+      <form method="post">
+          
+          <div class="row">
+              <div class="col-md-3">
+                 <!-- TO KEEP THE DETAILS IN THE MIDDLE -->
+              </div>
+              <div class="col-md-8">
+                  <div class="tab-content profile-tab" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Organisation Name</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{ name }}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Email</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{ email }}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Phone</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p> {{ phone }}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <label>Address</label>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <p>{{ street }} {{ city }} {{ state }}  {{ pin }}</p>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                        <label style="text-align: center;">Campaigns and events conducted-</label>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-6">
+                                        <p>{{ campaigns }}</p>
+                                    </div>
+                                </div>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </form>           
+  </div>
+
+   
+
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+               <div class="col-lg-3 col-md-6 col-sm-6 col">
+					<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+					<!--headin5_amrc-->
+					<p class="mb10">Environment Sustainability has become the most important aspect in today's world. We value and care about that.</p>
+					<p><i class="fa fa-location-arrow"></i> 10, Geeta Bhawan, Indore </p>
+					<p><i class="fa fa-phone"></i> +91-9999878398 </p>
+					<p><i class="fa fa fa-envelope"></i> info@astepahead.com </p>
+               </div>
+               <div class="col-lg-3 col-md-6 col-sm-6 col">
+					<h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+					<!--headin5_amrc ends here-->
+					<ul class="footer_ul2_amrc">
+						<li>
+							<a href="#"><i class="fab fa-facebook fleft padding-right"></i> </a>
+							<p>On facebook <br><a href="#">https://www.lipsum.com/</a></p>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+							<p>On twitter <br><a href="#">https://www.lipsum.com/</a></p>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-instagram fleft padding-right"></i> </a>
+							<p>On instagram <br><a href="#">https://www.lipsum.com/</a></p>
+						</li>
+					</ul>
+					<!--footer_ul2_amrc ends here-->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+					<!--headin5_amrc-->
+					<ul class="footer_ul_amrc">
+						<li><a href="#">Our Team </a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Our Services</a></li>
+						<li><a href="#">Get In Touch</a></li>
+					</ul>
+					<!--footer_ul_amrc ends here-->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 ">
+					<h5 class="headin5_amrc col_white_amrc pt2">Be a part?</h5>
+					<!--headin5_amrc-->
+					<p class="mb10">If you think about the future and believe in providing greener and healthier environment to coming generations then come, be a part of our team.</p>
+					<!--footer_ul_amrc ends here-->
+				</div>
+			</div>
+		</div>
+        <div class="container">
+            <div class="footer-logo">
+				<a href="#"><img src="../images/footer-logo.png" alt="logo" /></a>
+			</div>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="copyright text-center">All Rights Reserved. &copy; 2021 <a href="user-dashboard.html">A Step Ahead</a>
+            </p>
+            <ul class="social_footer_ul">
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
